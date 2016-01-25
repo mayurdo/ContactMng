@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    </head>
+    <body ng-app="myApp">
+        <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand no-padding-top" ui-sref="home">
+                          <img alt="Brand" src="app/images/AlgosysTechLogoFull.png">
+                      </a>
+                  </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li data-ng-class="homeLinkClass"><a ui-sref="Masters.CustomerMaster">Customer Master</a></li>
+                      <li class="dropdown" data-ng-class="productLinkClass" data-ng-click="activateLink('product')">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product</a>
+                          <ul class="dropdown-menu">
+                              <li><a ui-sref="collosys">Debit Collection System</a></li>
+                              <li><a ui-sref="scollosys">Commission Billing System</a></li>
+                              <li><a ui-sref="mcollosys">Mobile Collection System</a></li>
+                              <li><a ui-sref="mbizom">Bizom-Sales Force Automation</a></li>
+                          </ul>
+                      </li>
+                      <li data-ng-class="supportLinkClass" data-ng-click="activateLink('support')"><a ui-sref="support">Support</a></li>
+                      <li data-ng-class="clientsLinkClass" data-ng-click="activateLink('clients')"><a ui-sref="clients">Clients</a></li>
+                      <li data-ng-class="careersLinkClass" data-ng-click="activateLink('careers')"><a ui-sref="careers">Careers</a></li>
+                      <li data-ng-class="contactsLinkClass" data-ng-click="activateLink('contacts')"><a ui-sref="contact">Contacts</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+        <!--<div>
+            {{2+3}}
+        </div>-->
+        <div ui-view></div>
+        
+        
+         <!-- bower:js -->
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+      <!-- endbower -->
+
+      <!-- build:sourcejs source.js-->
+        <!-- modulejs:js -->
+            <script src="appDist/main.js"></script>
+        <!-- endinject -->
+      <!-- endbuild -->
+    </body>
+</html>

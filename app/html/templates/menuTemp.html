@@ -1,0 +1,12 @@
+<ul  class="list-group">
+    <div ng-repeat="menu in menulist">
+        <a href="#" class="list-group-item menuheader" ng-click="toggleMenu(menu)">
+             {{menu.name}} 
+             <i class="fa fa-angle-up fa-fw pull-right" ng-show="menu.showSubMenu"></i> 
+             <i class="fa fa-angle-down fa-fw pull-right" ng-show="!menu.showSubMenu"></i>
+        </a>
+        <div ng-show="menu.showSubMenu">
+            <a ng-repeat="submenu in menu.submenus" ui-sref="{{submenu.url}}" class="list-group-item">{{submenu.name}}</a>
+        </div>
+    </div>
+</ul>
