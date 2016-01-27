@@ -1,5 +1,5 @@
 
-// Directive : mobile-no
+// Directive : m-mobile-no
 myApp.directive("mMobileNo",function(methodHelper){
     return{
         restric:"A",

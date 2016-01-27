@@ -10,13 +10,13 @@ myApp.directive("mFormGroup",function(controlsFactory){
       templateUrl:"app/html/templates/formGroup.html",
       link: function (scope,element, attribute ) {
         
-        for(var i=0;i<=controlsFactory.controls.lengh;i++)
-        {
-            if(controlsFactory.controls[i].name===scope.controlName)      
-            {
-              scope.options=controlsFactory.controls[i];
-            }
-        }
-        }
+        var control=  _.find(controlsFactory.controls,function(control){
+                                 return ((control.page===attribute.pagename) 
+                                                && (control.name===attribute.controlname));
+                              });
+                              
+        scope.options=control;
+        
+      }
     };
 })

@@ -3,6 +3,8 @@
     <head>
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="appDist/maincss.css">
     </head>
     <body ng-app="myApp">
         <nav class="navbar navbar-default">
@@ -42,9 +44,9 @@
               </div><!-- /.container-fluid -->
             </nav>
         </div>
-        <!--<div>
-            {{2+3}}
-        </div>-->
+        <div ng-hide="true">
+           <h1>Loading please wait.....</h1>
+        </div>
         <div ui-view></div>
         
         
@@ -54,6 +56,7 @@
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
       <script src="bower_components/jquery/dist/jquery.js"></script>
       <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="bower_components/underscore/underscore.js"></script>
       <!-- endbower -->
 
       <!-- build:sourcejs source.js-->
